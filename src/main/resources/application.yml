@@ -1,0 +1,22 @@
+server:
+  port: 5001
+
+spring:
+  data:
+    mongodb:
+      #uri: mongodb+srv://root:password007@cluster0-cjhrd.gcp.mongodb.net/scorpious-demo?retryWrites=true&w=majority
+      host: 127.0.0.1
+      port: 27017
+      auto-index-creation: true
+
+logging:
+  level:
+    root: INFO
+    org.springframework: ERROR
+    com.asiczen: TRACE
+  file:
+    name: .logs/pet-screen-service.log
+    max-size: 10 MB
+
+
+app.idle.time: 900000

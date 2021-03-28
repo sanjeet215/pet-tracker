@@ -1,0 +1,904 @@
+2021-03-28 19:25:43.066  INFO 120656 --- [main] o.a.p.PetTrackerApplicationTests         : Starting PetTrackerApplicationTests on LAPTOP-ET63CILL with PID 120656 (started by sanjeet in D:\Pet Services\pet-tracker)
+2021-03-28 19:25:43.066  INFO 120656 --- [main] o.a.p.PetTrackerApplicationTests         : No active profile set, falling back to default profiles: default
+2021-03-28 19:25:49.219 ERROR 120656 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.data.rest.core.support.UnwrappingRepositoryInvokerFactory.<init>(UnwrappingRepositoryInvokerFactory.java:57)
+
+The following method did not exist:
+
+    org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+
+The method's class, org.springframework.plugin.core.PluginRegistry, is available from the following locations:
+
+    jar:file:/C:/Users/sanjeet/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar!/org/springframework/plugin/core/PluginRegistry.class
+
+The class hierarchy was loaded from the following locations:
+
+    org.springframework.plugin.core.PluginRegistry: file:/C:/Users/sanjeet/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.springframework.plugin.core.PluginRegistry
+
+2021-03-28 19:25:49.250 ERROR 120656 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@63fdab07] to prepare test instance [org.asiczen.pettracker.PetTrackerApplicationTests@537b3be1]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) ~[spring-test-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:341) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:346) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:341) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:340) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:263) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:256) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at java.base/java.util.Optional.orElseGet(Optional.java:369) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:255) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:108) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:107) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:71) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/C:/Users/sanjeet/.m2/repository/io/springfox/springfox-spring-web/2.7.0/springfox-spring-web-2.7.0.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/sanjeet/.m2/repository/io/springfox/springfox-spring-web/2.7.0/springfox-spring-web-2.7.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Unsatisfied dependency expressed through method 'requestMappingHandlerMapping' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jsonSchemaConverter' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.webmvc.json.PersistentEntityToJsonSchemaConverter]: Factory method 'jsonSchemaConverter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultConversionService' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.DefaultFormattingConversionService]: Factory method 'defaultConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) ~[spring-boot-test-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 65 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/sanjeet/.m2/repository/io/springfox/springfox-spring-web/2.7.0/springfox-spring-web-2.7.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Unsatisfied dependency expressed through method 'requestMappingHandlerMapping' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jsonSchemaConverter' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.webmvc.json.PersistentEntityToJsonSchemaConverter]: Factory method 'jsonSchemaConverter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultConversionService' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.DefaultFormattingConversionService]: Factory method 'defaultConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1525) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1489) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1378) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1265) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 84 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Unsatisfied dependency expressed through method 'requestMappingHandlerMapping' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jsonSchemaConverter' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.webmvc.json.PersistentEntityToJsonSchemaConverter]: Factory method 'jsonSchemaConverter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultConversionService' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.DefaultFormattingConversionService]: Factory method 'defaultConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:538) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1525) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1489) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1378) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1265) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 101 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jsonSchemaConverter' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.webmvc.json.PersistentEntityToJsonSchemaConverter]: Factory method 'jsonSchemaConverter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultConversionService' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.DefaultFormattingConversionService]: Factory method 'defaultConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 118 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jsonSchemaConverter' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.webmvc.json.PersistentEntityToJsonSchemaConverter]: Factory method 'jsonSchemaConverter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultConversionService' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.DefaultFormattingConversionService]: Factory method 'defaultConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 132 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jsonSchemaConverter' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.webmvc.json.PersistentEntityToJsonSchemaConverter]: Factory method 'jsonSchemaConverter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultConversionService' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.DefaultFormattingConversionService]: Factory method 'defaultConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:624) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:612) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.boot.convert.ApplicationConversionService.addBeans(ApplicationConversionService.java:161) ~[spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.addFormatters(WebMvcAutoConfiguration.java:312) ~[spring-boot-autoconfigure-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.addFormatters(WebMvcConfigurerComposite.java:81) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.addFormatters(DelegatingWebMvcConfiguration.java:78) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration.mvcConversionService(WebMvcAutoConfiguration.java:448) ~[spring-boot-autoconfigure-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 133 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.webmvc.json.PersistentEntityToJsonSchemaConverter]: Factory method 'jsonSchemaConverter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultConversionService' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.DefaultFormattingConversionService]: Factory method 'defaultConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 154 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultConversionService' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.DefaultFormattingConversionService]: Factory method 'defaultConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.resolveBeanReference(ConfigurationClassEnhancer.java:362) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:334) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$d763c3eb.defaultConversionService(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration.persistentEntityJackson2Module(RepositoryRestMvcConfiguration.java:570) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration.lambda$new$0(RepositoryRestMvcConfiguration.java:181) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:212) ~[spring-data-commons-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.data.util.Lazy.get(Lazy.java:94) ~[spring-data-commons-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration.objectMapper(RepositoryRestMvcConfiguration.java:415) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration.jsonSchemaConverter(RepositoryRestMvcConfiguration.java:404) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$d763c3eb.CGLIB$jsonSchemaConverter$5(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$d763c3eb$$FastClassBySpringCGLIB$$404c3db.invoke(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$d763c3eb.jsonSchemaConverter(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 155 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.DefaultFormattingConversionService]: Factory method 'defaultConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 183 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:212) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.resolveBeanReference(ConfigurationClassEnhancer.java:361) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:334) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$d763c3eb.repositoryInvokerFactory(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration.uriToEntityConverter(RepositoryRestMvcConfiguration.java:589) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration.defaultConversionService(RepositoryRestMvcConfiguration.java:235) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$d763c3eb.CGLIB$defaultConversionService$7(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$d763c3eb$$FastClassBySpringCGLIB$$404c3db.invoke(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$d763c3eb.defaultConversionService(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 184 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 208 common frames omitted
+Caused by: java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.data.rest.core.support.UnwrappingRepositoryInvokerFactory.<init>(UnwrappingRepositoryInvokerFactory.java:57) ~[spring-data-rest-core-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration.repositoryInvokerFactory(RepositoryRestMvcConfiguration.java:628) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$d763c3eb.CGLIB$repositoryInvokerFactory$51(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$d763c3eb$$FastClassBySpringCGLIB$$404c3db.invoke(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$d763c3eb.repositoryInvokerFactory(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 209 common frames omitted
+
+2021-03-28 19:31:17.456  INFO 127212 --- [main] o.a.p.PetTrackerApplicationTests         : Starting PetTrackerApplicationTests on LAPTOP-ET63CILL with PID 127212 (started by sanjeet in D:\Pet Services\pet-tracker)
+2021-03-28 19:31:17.472  INFO 127212 --- [main] o.a.p.PetTrackerApplicationTests         : No active profile set, falling back to default profiles: default
+2021-03-28 19:31:21.709 ERROR 127212 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.data.rest.core.support.UnwrappingRepositoryInvokerFactory.<init>(UnwrappingRepositoryInvokerFactory.java:57)
+
+The following method did not exist:
+
+    org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+
+The method's class, org.springframework.plugin.core.PluginRegistry, is available from the following locations:
+
+    jar:file:/C:/Users/sanjeet/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar!/org/springframework/plugin/core/PluginRegistry.class
+
+The class hierarchy was loaded from the following locations:
+
+    org.springframework.plugin.core.PluginRegistry: file:/C:/Users/sanjeet/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.springframework.plugin.core.PluginRegistry
+
+2021-03-28 19:31:21.729 ERROR 127212 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@63fdab07] to prepare test instance [org.asiczen.pettracker.PetTrackerApplicationTests@4392362c]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) ~[spring-test-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:341) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:346) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:341) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:340) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:263) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:256) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at java.base/java.util.Optional.orElseGet(Optional.java:369) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:255) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:108) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:107) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:71) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/C:/Users/sanjeet/.m2/repository/io/springfox/springfox-spring-web/2.7.0/springfox-spring-web-2.7.0.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/sanjeet/.m2/repository/io/springfox/springfox-spring-web/2.7.0/springfox-spring-web-2.7.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Unsatisfied dependency expressed through method 'requestMappingHandlerMapping' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jsonSchemaConverter' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.webmvc.json.PersistentEntityToJsonSchemaConverter]: Factory method 'jsonSchemaConverter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultConversionService' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.DefaultFormattingConversionService]: Factory method 'defaultConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) ~[spring-boot-test-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 65 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/sanjeet/.m2/repository/io/springfox/springfox-spring-web/2.7.0/springfox-spring-web-2.7.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Unsatisfied dependency expressed through method 'requestMappingHandlerMapping' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jsonSchemaConverter' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.webmvc.json.PersistentEntityToJsonSchemaConverter]: Factory method 'jsonSchemaConverter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultConversionService' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.DefaultFormattingConversionService]: Factory method 'defaultConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1525) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1489) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1378) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1265) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 84 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Unsatisfied dependency expressed through method 'requestMappingHandlerMapping' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jsonSchemaConverter' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.webmvc.json.PersistentEntityToJsonSchemaConverter]: Factory method 'jsonSchemaConverter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultConversionService' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.DefaultFormattingConversionService]: Factory method 'defaultConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:538) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1525) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1489) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1378) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1265) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 101 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jsonSchemaConverter' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.webmvc.json.PersistentEntityToJsonSchemaConverter]: Factory method 'jsonSchemaConverter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultConversionService' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.DefaultFormattingConversionService]: Factory method 'defaultConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 118 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jsonSchemaConverter' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.webmvc.json.PersistentEntityToJsonSchemaConverter]: Factory method 'jsonSchemaConverter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultConversionService' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.DefaultFormattingConversionService]: Factory method 'defaultConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 132 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jsonSchemaConverter' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.webmvc.json.PersistentEntityToJsonSchemaConverter]: Factory method 'jsonSchemaConverter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultConversionService' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.DefaultFormattingConversionService]: Factory method 'defaultConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:624) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:612) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.boot.convert.ApplicationConversionService.addBeans(ApplicationConversionService.java:161) ~[spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.addFormatters(WebMvcAutoConfiguration.java:312) ~[spring-boot-autoconfigure-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.addFormatters(WebMvcConfigurerComposite.java:81) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.addFormatters(DelegatingWebMvcConfiguration.java:78) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration.mvcConversionService(WebMvcAutoConfiguration.java:448) ~[spring-boot-autoconfigure-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 133 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.rest.webmvc.json.PersistentEntityToJsonSchemaConverter]: Factory method 'jsonSchemaConverter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultConversionService' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.DefaultFormattingConversionService]: Factory method 'defaultConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 154 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultConversionService' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.DefaultFormattingConversionService]: Factory method 'defaultConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.resolveBeanReference(ConfigurationClassEnhancer.java:362) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:334) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$955a0f6e.defaultConversionService(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration.persistentEntityJackson2Module(RepositoryRestMvcConfiguration.java:570) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration.lambda$new$0(RepositoryRestMvcConfiguration.java:181) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:212) ~[spring-data-commons-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.data.util.Lazy.get(Lazy.java:94) ~[spring-data-commons-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration.objectMapper(RepositoryRestMvcConfiguration.java:415) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration.jsonSchemaConverter(RepositoryRestMvcConfiguration.java:404) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$955a0f6e.CGLIB$jsonSchemaConverter$23(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$955a0f6e$$FastClassBySpringCGLIB$$2822af4b.invoke(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$955a0f6e.jsonSchemaConverter(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 155 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.DefaultFormattingConversionService]: Factory method 'defaultConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 183 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositoryInvokerFactory' defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:212) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.resolveBeanReference(ConfigurationClassEnhancer.java:361) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:334) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$955a0f6e.repositoryInvokerFactory(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration.uriToEntityConverter(RepositoryRestMvcConfiguration.java:589) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration.defaultConversionService(RepositoryRestMvcConfiguration.java:235) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$955a0f6e.CGLIB$defaultConversionService$7(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$955a0f6e$$FastClassBySpringCGLIB$$2822af4b.invoke(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$955a0f6e.defaultConversionService(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 184 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.repository.support.RepositoryInvokerFactory]: Factory method 'repositoryInvokerFactory' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 208 common frames omitted
+Caused by: java.lang.NoSuchMethodError: org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+	at org.springframework.data.rest.core.support.UnwrappingRepositoryInvokerFactory.<init>(UnwrappingRepositoryInvokerFactory.java:57) ~[spring-data-rest-core-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration.repositoryInvokerFactory(RepositoryRestMvcConfiguration.java:628) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$955a0f6e.CGLIB$repositoryInvokerFactory$20(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$955a0f6e$$FastClassBySpringCGLIB$$2822af4b.invoke(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration$$EnhancerBySpringCGLIB$$955a0f6e.repositoryInvokerFactory(<generated>) ~[spring-data-rest-webmvc-3.3.2.RELEASE.jar:3.3.2.RELEASE]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 209 common frames omitted
+
+2021-03-28 19:33:25.660  INFO 125136 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Starting PetTrackerApplication on LAPTOP-ET63CILL with PID 125136 (D:\Pet Services\pet-tracker\target\classes started by sanjeet in D:\Pet Services\pet-tracker)
+2021-03-28 19:33:25.660  INFO 125136 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : No active profile set, falling back to default profiles: default
+2021-03-28 19:33:30.312  INFO 125136 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-28 19:33:30.312  INFO 125136 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-28 19:33:30.570  INFO 125136 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-28 19:33:32.392  INFO 125136 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-03-28 19:33:32.423 ERROR 125136 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.data.rest.core.support.UnwrappingRepositoryInvokerFactory.<init>(UnwrappingRepositoryInvokerFactory.java:57)
+
+The following method did not exist:
+
+    org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+
+The method's class, org.springframework.plugin.core.PluginRegistry, is available from the following locations:
+
+    jar:file:/C:/Users/sanjeet/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar!/org/springframework/plugin/core/PluginRegistry.class
+
+The class hierarchy was loaded from the following locations:
+
+    org.springframework.plugin.core.PluginRegistry: file:/C:/Users/sanjeet/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.springframework.plugin.core.PluginRegistry
+
+2021-03-28 19:37:15.276  INFO 102520 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Starting PetTrackerApplication on LAPTOP-ET63CILL with PID 102520 (D:\Pet Services\pet-tracker\target\classes started by sanjeet in D:\Pet Services\pet-tracker)
+2021-03-28 19:37:15.284  INFO 102520 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : No active profile set, falling back to default profiles: default
+2021-03-28 19:37:19.162  INFO 102520 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-28 19:37:19.162  INFO 102520 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-28 19:37:19.315  INFO 102520 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-28 19:37:20.926  INFO 102520 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-03-28 19:37:20.957 ERROR 102520 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.data.rest.core.support.UnwrappingRepositoryInvokerFactory.<init>(UnwrappingRepositoryInvokerFactory.java:57)
+
+The following method did not exist:
+
+    org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+
+The method's class, org.springframework.plugin.core.PluginRegistry, is available from the following locations:
+
+    jar:file:/C:/Users/sanjeet/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar!/org/springframework/plugin/core/PluginRegistry.class
+
+The class hierarchy was loaded from the following locations:
+
+    org.springframework.plugin.core.PluginRegistry: file:/C:/Users/sanjeet/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.springframework.plugin.core.PluginRegistry
+
+2021-03-28 19:41:56.128  INFO 87688 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Starting PetTrackerApplication using Java 11.0.8 on LAPTOP-ET63CILL with PID 87688 (D:\Pet Services\pet-tracker\target\classes started by sanjeet in D:\Pet Services\pet-tracker)
+2021-03-28 19:41:56.128  INFO 87688 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : No active profile set, falling back to default profiles: default
+2021-03-28 19:42:00.965  INFO 87688 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-28 19:42:00.972  INFO 87688 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-28 19:42:01.119  INFO 87688 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-28 19:42:02.422  INFO 87688 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-03-28 19:42:02.469 ERROR 87688 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.data.rest.core.support.UnwrappingRepositoryInvokerFactory.<init>(UnwrappingRepositoryInvokerFactory.java:54)
+
+The following method did not exist:
+
+    org.springframework.plugin.core.PluginRegistry.of(Ljava/util/List;)Lorg/springframework/plugin/core/PluginRegistry;
+
+The method's class, org.springframework.plugin.core.PluginRegistry, is available from the following locations:
+
+    jar:file:/C:/Users/sanjeet/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar!/org/springframework/plugin/core/PluginRegistry.class
+
+The class hierarchy was loaded from the following locations:
+
+    org.springframework.plugin.core.PluginRegistry: file:/C:/Users/sanjeet/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.springframework.plugin.core.PluginRegistry
+
+2021-03-28 19:46:42.590  INFO 119016 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Starting PetTrackerApplication using Java 11.0.8 on LAPTOP-ET63CILL with PID 119016 (D:\Pet Services\pet-tracker\target\classes started by sanjeet in D:\Pet Services\pet-tracker)
+2021-03-28 19:46:42.598  INFO 119016 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : No active profile set, falling back to default profiles: default
+2021-03-28 19:46:47.487  INFO 119016 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-28 19:46:47.487  INFO 119016 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-28 19:46:47.623  INFO 119016 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-28 19:46:49.468  INFO 119016 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-03-28 19:46:49.669  INFO 119016 --- [restartedMain] org.mongodb.driver.cluster               : Cluster description not yet available. Waiting for 30000 ms before timing out
+2021-03-28 19:46:51.648  INFO 119016 --- [cluster-ClusterId{value='60608fd1d477f621407edf21', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server 127.0.0.1:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70) ~[mongodb-driver-core-4.1.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:143) ~[mongodb-driver-core-4.1.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188) ~[mongodb-driver-core-4.1.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144) ~[mongodb-driver-core-4.1.1.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method) ~[na:na]
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:608) ~[na:na]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:78) ~[mongodb-driver-core-4.1.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79) ~[mongodb-driver-core-4.1.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65) ~[mongodb-driver-core-4.1.1.jar:na]
+	... 4 common frames omitted
+
+2021-03-28 19:47:19.693  INFO 119016 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-03-28 19:47:19.757 ERROR 119016 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthContributorRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.health.HealthContributorRegistry]: Factory method 'healthContributorRegistry' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mongoHealthContributor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/mongo/MongoHealthContributorAutoConfiguration.class]: Unsatisfied dependency expressed through method 'mongoHealthContributor' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongoTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/mongo/MongoDatabaseFactoryDependentConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.core.MongoTemplate]: Factory method 'mongoTemplate' threw exception; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.asiczen.pettracker.PetTrackerApplication.main(PetTrackerApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.4.2.jar:2.4.2]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.health.HealthContributorRegistry]: Factory method 'healthContributorRegistry' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mongoHealthContributor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/mongo/MongoHealthContributorAutoConfiguration.class]: Unsatisfied dependency expressed through method 'mongoHealthContributor' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongoTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/mongo/MongoDatabaseFactoryDependentConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.core.MongoTemplate]: Factory method 'mongoTemplate' threw exception; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.3.jar:5.3.3]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mongoHealthContributor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/mongo/MongoHealthContributorAutoConfiguration.class]: Unsatisfied dependency expressed through method 'mongoHealthContributor' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongoTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/mongo/MongoDatabaseFactoryDependentConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.core.MongoTemplate]: Factory method 'mongoTemplate' threw exception; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:671) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:659) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1305) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.boot.actuate.autoconfigure.health.HealthEndpointConfiguration.healthContributorRegistry(HealthEndpointConfiguration.java:82) ~[spring-boot-actuator-autoconfigure-2.4.2.jar:2.4.2]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.3.jar:5.3.3]
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongoTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/mongo/MongoDatabaseFactoryDependentConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.core.MongoTemplate]: Factory method 'mongoTemplate' threw exception; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1598) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1562) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1481) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1338) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.3.jar:5.3.3]
+	... 44 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.core.MongoTemplate]: Factory method 'mongoTemplate' threw exception; nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.3.jar:5.3.3]
+	... 61 common frames omitted
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:88) ~[spring-data-mongodb-3.1.3.jar:3.1.3]
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2882) ~[spring-data-mongodb-3.1.3.jar:3.1.3]
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:564) ~[spring-data-mongodb-3.1.3.jar:3.1.3]
+	at org.springframework.data.mongodb.core.DefaultIndexOperations.execute(DefaultIndexOperations.java:214) ~[spring-data-mongodb-3.1.3.jar:3.1.3]
+	at org.springframework.data.mongodb.core.DefaultIndexOperations.ensureIndex(DefaultIndexOperations.java:121) ~[spring-data-mongodb-3.1.3.jar:3.1.3]
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.createIndex(MongoPersistentEntityIndexCreator.java:156) ~[spring-data-mongodb-3.1.3.jar:3.1.3]
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.checkForAndCreateIndexes(MongoPersistentEntityIndexCreator.java:146) ~[spring-data-mongodb-3.1.3.jar:3.1.3]
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.checkForIndexes(MongoPersistentEntityIndexCreator.java:130) ~[spring-data-mongodb-3.1.3.jar:3.1.3]
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.<init>(MongoPersistentEntityIndexCreator.java:95) ~[spring-data-mongodb-3.1.3.jar:3.1.3]
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.<init>(MongoPersistentEntityIndexCreator.java:72) ~[spring-data-mongodb-3.1.3.jar:3.1.3]
+	at org.springframework.data.mongodb.core.MongoTemplate.<init>(MongoTemplate.java:250) ~[spring-data-mongodb-3.1.3.jar:3.1.3]
+	at org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryDependentConfiguration.mongoTemplate(MongoDatabaseFactoryDependentConfiguration.java:63) ~[spring-boot-autoconfigure-2.4.2.jar:2.4.2]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.3.jar:5.3.3]
+	... 62 common frames omitted
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at com.mongodb.internal.connection.BaseCluster.getDescription(BaseCluster.java:177) ~[mongodb-driver-core-4.1.1.jar:na]
+	at com.mongodb.internal.connection.SingleServerCluster.getDescription(SingleServerCluster.java:42) ~[mongodb-driver-core-4.1.1.jar:na]
+	at com.mongodb.client.internal.MongoClientDelegate.getConnectedClusterDescription(MongoClientDelegate.java:135) ~[mongodb-driver-sync-4.1.1.jar:na]
+	at com.mongodb.client.internal.MongoClientDelegate.createClientSession(MongoClientDelegate.java:95) ~[mongodb-driver-sync-4.1.1.jar:na]
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.getClientSession(MongoClientDelegate.java:266) ~[mongodb-driver-sync-4.1.1.jar:na]
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:190) ~[mongodb-driver-sync-4.1.1.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.executeCreateIndexes(MongoCollectionImpl.java:847) ~[mongodb-driver-sync-4.1.1.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.createIndexes(MongoCollectionImpl.java:830) ~[mongodb-driver-sync-4.1.1.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.createIndexes(MongoCollectionImpl.java:825) ~[mongodb-driver-sync-4.1.1.jar:na]
+	at com.mongodb.client.internal.MongoCollectionImpl.createIndex(MongoCollectionImpl.java:810) ~[mongodb-driver-sync-4.1.1.jar:na]
+	at org.springframework.data.mongodb.core.DefaultIndexOperations.lambda$ensureIndex$0(DefaultIndexOperations.java:131) ~[spring-data-mongodb-3.1.3.jar:3.1.3]
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:562) ~[spring-data-mongodb-3.1.3.jar:3.1.3]
+	... 76 common frames omitted
+
+2021-03-28 19:47:48.090  INFO 132024 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Starting PetTrackerApplication using Java 11.0.8 on LAPTOP-ET63CILL with PID 132024 (D:\Pet Services\pet-tracker\target\classes started by sanjeet in D:\Pet Services\pet-tracker)
+2021-03-28 19:47:48.095  INFO 132024 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : No active profile set, falling back to default profiles: default
+2021-03-28 19:47:51.651  INFO 132024 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-28 19:47:51.652  INFO 132024 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-28 19:47:51.802  INFO 132024 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-28 19:47:54.097  INFO 132024 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-03-28 19:47:54.231  INFO 132024 --- [cluster-rtt-ClusterId{value='60609012d1713f69e3bd8b31', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:2}] to 127.0.0.1:27017
+2021-03-28 19:47:54.235  INFO 132024 --- [cluster-ClusterId{value='60609012d1713f69e3bd8b31', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:1}] to 127.0.0.1:27017
+2021-03-28 19:47:54.236  INFO 132024 --- [cluster-ClusterId{value='60609012d1713f69e3bd8b31', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=47999000}
+2021-03-28 19:47:54.428  INFO 132024 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:3}] to 127.0.0.1:27017
+2021-03-28 19:47:55.125  INFO 132024 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Started PetTrackerApplication in 8.139 seconds (JVM running for 9.586)
+2021-03-28 20:08:12.629  INFO 128984 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Starting PetTrackerApplication using Java 11.0.8 on LAPTOP-ET63CILL with PID 128984 (D:\Pet Services\pet-tracker\target\classes started by sanjeet in D:\Pet Services\pet-tracker)
+2021-03-28 20:08:12.635  INFO 128984 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : No active profile set, falling back to default profiles: default
+2021-03-28 20:08:17.332  INFO 128984 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-28 20:08:17.333  INFO 128984 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-28 20:08:17.488  INFO 128984 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-28 20:08:18.551  INFO 128984 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-03-28 20:08:18.661  INFO 128984 --- [cluster-ClusterId{value='606094da20d5650446aa45e6', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:16}] to 127.0.0.1:27017
+2021-03-28 20:08:18.653  INFO 128984 --- [cluster-rtt-ClusterId{value='606094da20d5650446aa45e6', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:17}] to 127.0.0.1:27017
+2021-03-28 20:08:18.663  INFO 128984 --- [cluster-ClusterId{value='606094da20d5650446aa45e6', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=46804900}
+2021-03-28 20:08:18.831  INFO 128984 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:18}] to 127.0.0.1:27017
+2021-03-28 20:08:20.423  INFO 128984 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Started PetTrackerApplication in 8.728 seconds (JVM running for 10.627)
+2021-03-28 20:11:46.681  INFO 128984 --- [Thread-4] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:3, serverValue:18}] to 127.0.0.1:27017 because the pool has been closed.
+2021-03-28 20:11:47.204  INFO 128984 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Starting PetTrackerApplication using Java 11.0.8 on LAPTOP-ET63CILL with PID 128984 (D:\Pet Services\pet-tracker\target\classes started by sanjeet in D:\Pet Services\pet-tracker)
+2021-03-28 20:11:47.206  INFO 128984 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : No active profile set, falling back to default profiles: default
+2021-03-28 20:11:49.866  INFO 128984 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-28 20:11:49.867  INFO 128984 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-28 20:11:50.248  INFO 128984 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-28 20:11:50.572  INFO 128984 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-03-28 20:11:50.672  INFO 128984 --- [cluster-ClusterId{value='606095ae20d5650446aa45e7', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:20}] to 127.0.0.1:27017
+2021-03-28 20:11:50.669  INFO 128984 --- [cluster-rtt-ClusterId{value='606095ae20d5650446aa45e7', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:19}] to 127.0.0.1:27017
+2021-03-28 20:11:50.673  INFO 128984 --- [cluster-ClusterId{value='606095ae20d5650446aa45e7', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=7542500}
+2021-03-28 20:11:50.913  INFO 128984 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Started PetTrackerApplication in 3.921 seconds (JVM running for 221.117)
+2021-03-28 20:11:54.553  INFO 128984 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Starting PetTrackerApplication using Java 11.0.8 on LAPTOP-ET63CILL with PID 128984 (D:\Pet Services\pet-tracker\target\classes started by sanjeet in D:\Pet Services\pet-tracker)
+2021-03-28 20:11:54.553  INFO 128984 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : No active profile set, falling back to default profiles: default
+2021-03-28 20:11:55.407  INFO 128984 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-28 20:11:55.407  INFO 128984 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-28 20:11:55.452  INFO 128984 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-28 20:11:55.678  INFO 128984 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-03-28 20:11:55.696  INFO 128984 --- [restartedMain] org.mongodb.driver.cluster               : Cluster description not yet available. Waiting for 30000 ms before timing out
+2021-03-28 20:11:55.723  INFO 128984 --- [cluster-ClusterId{value='606095b320d5650446aa45e8', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:6, serverValue:21}] to 127.0.0.1:27017
+2021-03-28 20:11:55.744  INFO 128984 --- [cluster-ClusterId{value='606095b320d5650446aa45e8', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=21427000}
+2021-03-28 20:11:55.705  INFO 128984 --- [cluster-rtt-ClusterId{value='606095b320d5650446aa45e8', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:7, serverValue:22}] to 127.0.0.1:27017
+2021-03-28 20:11:55.755  INFO 128984 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:8, serverValue:23}] to 127.0.0.1:27017
+2021-03-28 20:11:56.802  INFO 128984 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Started PetTrackerApplication in 2.301 seconds (JVM running for 227.006)
+2021-03-28 20:11:59.905  INFO 136076 --- [main] o.a.p.PetTrackerApplicationTests         : Starting PetTrackerApplicationTests using Java 11.0.8 on LAPTOP-ET63CILL with PID 136076 (started by sanjeet in D:\Pet Services\pet-tracker)
+2021-03-28 20:11:59.910  INFO 136076 --- [main] o.a.p.PetTrackerApplicationTests         : No active profile set, falling back to default profiles: default
+2021-03-28 20:12:04.830  INFO 136076 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-03-28 20:12:04.969  INFO 136076 --- [cluster-ClusterId{value='606095bc468a643576d507b3', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:25}] to 127.0.0.1:27017
+2021-03-28 20:12:04.969  INFO 136076 --- [cluster-rtt-ClusterId{value='606095bc468a643576d507b3', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:24}] to 127.0.0.1:27017
+2021-03-28 20:12:04.973  INFO 136076 --- [cluster-ClusterId{value='606095bc468a643576d507b3', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=32574700}
+2021-03-28 20:12:05.185  INFO 136076 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:26}] to 127.0.0.1:27017
+2021-03-28 20:12:07.154  INFO 136076 --- [main] o.a.p.PetTrackerApplicationTests         : Started PetTrackerApplicationTests in 8.082 seconds (JVM running for 10.006)
+2021-03-28 20:12:08.044  INFO 136076 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:3, serverValue:26}] to 127.0.0.1:27017 because the pool has been closed.
+2021-03-28 20:13:43.370  INFO 134480 --- [main] o.a.p.PetTrackerApplicationTests         : Starting PetTrackerApplicationTests using Java 11.0.8 on LAPTOP-ET63CILL with PID 134480 (started by sanjeet in D:\Pet Services\pet-tracker)
+2021-03-28 20:13:43.376  INFO 134480 --- [main] o.a.p.PetTrackerApplicationTests         : No active profile set, falling back to default profiles: default
+2021-03-28 20:13:49.929  INFO 134480 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-03-28 20:13:50.124  INFO 134480 --- [cluster-rtt-ClusterId{value='60609625ad7e3e0add5f8f65', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:28}] to 127.0.0.1:27017
+2021-03-28 20:13:50.130  INFO 134480 --- [cluster-ClusterId{value='60609625ad7e3e0add5f8f65', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:27}] to 127.0.0.1:27017
+2021-03-28 20:13:50.139  INFO 134480 --- [cluster-ClusterId{value='60609625ad7e3e0add5f8f65', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=47364900}
+2021-03-28 20:13:50.451  INFO 134480 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:29}] to 127.0.0.1:27017
+2021-03-28 20:13:53.488  INFO 134480 --- [main] o.a.p.PetTrackerApplicationTests         : Started PetTrackerApplicationTests in 11.233 seconds (JVM running for 13.693)
+2021-03-28 20:13:54.462  INFO 134480 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:3, serverValue:29}] to 127.0.0.1:27017 because the pool has been closed.
+2021-03-28 20:22:14.871  INFO 128800 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Starting PetTrackerApplication using Java 11.0.8 on LAPTOP-ET63CILL with PID 128800 (D:\Pet Services\pet-tracker\target\classes started by sanjeet in D:\Pet Services\pet-tracker)
+2021-03-28 20:22:14.878  INFO 128800 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : No active profile set, falling back to default profiles: default
+2021-03-28 20:22:20.209  INFO 128800 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-28 20:22:20.210  INFO 128800 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-28 20:22:20.357  INFO 128800 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-28 20:22:21.789  INFO 128800 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-03-28 20:22:21.903  INFO 128800 --- [cluster-rtt-ClusterId{value='606098258596444edd9425a5', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:31}] to 127.0.0.1:27017
+2021-03-28 20:22:21.907  INFO 128800 --- [cluster-ClusterId{value='606098258596444edd9425a5', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:30}] to 127.0.0.1:27017
+2021-03-28 20:22:21.908  INFO 128800 --- [cluster-ClusterId{value='606098258596444edd9425a5', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=44906100}
+2021-03-28 20:22:22.082  INFO 128800 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:32}] to 127.0.0.1:27017
+2021-03-28 20:22:23.660  INFO 128800 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Started PetTrackerApplication in 9.93 seconds (JVM running for 11.566)
