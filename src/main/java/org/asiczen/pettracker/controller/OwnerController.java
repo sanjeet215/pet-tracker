@@ -2,6 +2,7 @@ package org.asiczen.pettracker.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.asiczen.pettracker.dto.OwnerDeviceListUpdateReq;
+import org.asiczen.pettracker.dto.response.OwnerResponse;
 import org.asiczen.pettracker.model.Device;
 import org.asiczen.pettracker.service.OwnerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class OwnerController {
         OwnerService ownerService;
 
         @PatchMapping("/device")
-        public String updateDeviceList(@RequestBody OwnerDeviceListUpdateReq ownerDeviceListUpdateReq) {
+        public OwnerResponse updateDeviceList(@RequestBody OwnerDeviceListUpdateReq ownerDeviceListUpdateReq) {
             return ownerService.updateDeviceList(ownerDeviceListUpdateReq);
         }
 
