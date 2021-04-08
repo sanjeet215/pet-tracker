@@ -20,17 +20,23 @@ public class OwnerServiceImpl implements OwnerService {
     OwnerRepository ownerRepository;
 
     @Override
-    public void updateDeviceList(OwnerDeviceListUpdateReq ownerDeviceListUpdateReq) {
+    public String updateDeviceList(OwnerDeviceListUpdateReq ownerDeviceListUpdateReq) {
 
 
         Owner owner = ownerRepository.findByOwnerId(ownerDeviceListUpdateReq.getOwnerId());
         if (owner != null) {
 
-            owner.getDeviceList().add(ownerDeviceListUpdateReq.getDevice());
-            try {
-                ownerRepository.save(owner);
-            } catch (Exception exception) {
-                log.error("Update error");
+            if(owner.getDeviceList().contains(ownerDeviceListUpdateReq.getDevice())) {
+
+                return "Already this device available";
+            }else{
+                owner.getDeviceList().add(ownerDeviceListUpdateReq.getDevice());
+                try {
+                    ownerRepository.save(owner);
+                } catch (Exception exception) {
+                    log.error("Update error");
+                }
+                return "Device registered successfully";
             }
 
         } else {

@@ -21,9 +21,8 @@ public class OwnerController {
         OwnerService ownerService;
 
         @PatchMapping("/device")
-        public ResponseEntity<?> updateDeviceList(@RequestBody OwnerDeviceListUpdateReq ownerDeviceListUpdateReq) {
-            ownerService.updateDeviceList(ownerDeviceListUpdateReq);
-            return new ResponseEntity<>("Device registered successfully", HttpStatus.CREATED);
+        public String updateDeviceList(@RequestBody OwnerDeviceListUpdateReq ownerDeviceListUpdateReq) {
+            return ownerService.updateDeviceList(ownerDeviceListUpdateReq);
         }
 
         @ResponseStatus(HttpStatus.OK)

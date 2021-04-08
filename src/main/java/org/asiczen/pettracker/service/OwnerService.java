@@ -8,7 +8,7 @@ import java.util.List;
 
 @Service
 public interface OwnerService {
-    void updateDeviceList(OwnerDeviceListUpdateReq ownerDeviceListUpdateReq);
+    String updateDeviceList(OwnerDeviceListUpdateReq ownerDeviceListUpdateReq);
 
     List<Device> getAllDeviceList(String ownerId);
 }
