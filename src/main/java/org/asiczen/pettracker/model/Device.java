@@ -11,11 +11,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "device_pet")
 @Builder
 public class Device {
-    @Id
-    private String id;
     @Indexed(unique = true)
     private String deviceId;
     private String deviceType;
