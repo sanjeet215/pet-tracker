@@ -65,4 +65,17 @@ public class OwnerServiceImpl implements OwnerService {
         }
 
     }
+
+    @Override
+    public Owner getOwnerDetails(String ownerId) {
+
+        Owner owner = ownerRepository.findByOwnerId(ownerId);
+        if (owner != null) {
+
+            return owner;
+
+        } else {
+            throw new ResourceNotFoundException("Invalid owner id to get owner.");
+        }
+    }
 }
