@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.asiczen.pettracker.dto.OwnerDeviceListUpdateReq;
 import org.asiczen.pettracker.dto.response.OwnerResponse;
 import org.asiczen.pettracker.model.Device;
+import org.asiczen.pettracker.model.Owner;
 import org.asiczen.pettracker.service.OwnerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,6 +31,12 @@ public class OwnerController {
         @GetMapping("/device")
         public List<Device> getDeviceList(@Valid @RequestParam String ownerId) {
             return ownerService.getAllDeviceList(ownerId);
+        }
+
+        @ResponseStatus(HttpStatus.OK)
+        @GetMapping
+        public Owner getOwnerDetails(@Valid @RequestParam String ownerId) {
+                return ownerService.getOwnerDetails(ownerId);
         }
 
 

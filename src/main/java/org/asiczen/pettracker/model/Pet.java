@@ -24,6 +24,6 @@ public class Pet {
     private String petType;
     private String petBreed;
 
-    @DBRef
+    //@DBRef
     private Device device; // One-to-one with device.
 }
