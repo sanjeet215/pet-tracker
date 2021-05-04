@@ -7,5 +7,8 @@ import java.util.List;
 
 @Service
 public interface PetService {
+
     List<Pet> getAllPetList(String ownerId);
+
+    long getPetCount(String ownerId);
 }

@@ -13,7 +13,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 @Builder
 public class Device {
-    @Indexed(unique = true)
     private String deviceId;
     private String deviceType;
 }

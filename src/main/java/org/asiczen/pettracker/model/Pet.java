@@ -23,6 +23,8 @@ public class Pet {
     private String name;
     private String petType;
     private String petBreed;
+    private float petWeight;
+    private float petAge;
 
     //@DBRef
     private Device device; // One-to-one with device.

@@ -10,4 +10,8 @@ import java.util.Optional;
 @RepositoryRestResource(collectionResourceRel = "pet" , path = "pet")
 public interface PetRepository extends MongoRepository<Pet, String> {
     Optional<List<Pet>> findByOwnerId(String ownerId);
+
+    Pet findByDeviceDeviceId(String devEui);
+
+    Optional<Pet> findByOwnerIdAndDeviceDeviceId(String ownerId, String devEui);
 }

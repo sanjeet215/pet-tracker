@@ -2,12 +2,52 @@ server:
   port: 5001
 
 spring:
+  application:
+    name: petra-service
   data:
     mongodb:
       #uri: mongodb+srv://root:password007@cluster0-cjhrd.gcp.mongodb.net/scorpious-demo?retryWrites=true&w=majority
       host: 127.0.0.1
       port: 27017
       auto-index-creation: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        concurrency: 5
+        max-concurrency: 8
+        retry:
+          enabled: true
+          initial-interval: 3s
+          max-attempts: 6
+          max-interval: 10s
+          multiplier: 2
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8090/auth/realms/scorpious_fleet
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8090/auth/realms/scorpious_fleet
+            user-name-attribute: preferred_username
+  eureka:
+    client:
+      enabled: false
+
+  keycloak:
+    realm: scorpious_fleet
+    auth-server-url: http://localhost:8090/auth
+    ssl-required: external
+    resource: springboot-microservice
+    use-resource-role-mappings: true
+    bearer-only: true
+    credentials:
+      secret: e50bb4d9-d062-4234-96eb-3e7d88fdfac4
 
 logging:
   level:
@@ -20,3 +60,13 @@ logging:
 
 
 app.idle.time: 900000
+
+
+sms.api.url: https://smsapi.24x7sms.com/api_2.0/SendSMS.aspx?
+sms.api.apikey: KZCyNceGNJ5
+sms.api.SenderID: ASICZN
+sms.api.ServiceName: TEMPLATE_BASED
+
+
+app.url.user: http://localhost:8081/api/user/
+#app.url.user: http://localhost:8090/auth/admin/realms/scorpious_fleet/users

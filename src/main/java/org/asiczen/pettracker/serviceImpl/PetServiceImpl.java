@@ -26,4 +26,12 @@ public class PetServiceImpl implements PetService {
             throw new ResourceNotFoundException("No pet registered in this owner yet ....");
         }
     }
+
+    @Override
+    public long getPetCount(String ownerId) {
+        Optional<List<Pet>> pets = petRepository.findByOwnerId(ownerId);
+
+        return (pets.isPresent()) ? pets.get().size() : 0L;
+
+    }
 }

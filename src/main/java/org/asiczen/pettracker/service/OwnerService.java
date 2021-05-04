@@ -15,4 +15,8 @@ public interface OwnerService {
     List<Device> getAllDeviceList(String ownerId);
 
     Owner getOwnerDetails(String ownerId);
+
+    long getDeviceCount(String ownerId);
+
+    OwnerResponse deleteDevice(String ownerId,String devEui);
 }
