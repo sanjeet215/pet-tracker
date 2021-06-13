@@ -14,4 +14,6 @@ public class CountResponse {
     private long deviceCount;
 
     private long petCount;
+
+    private long cattleCount;
 }

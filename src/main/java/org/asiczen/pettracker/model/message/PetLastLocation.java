@@ -1,6 +1,8 @@
 package org.asiczen.pettracker.model.message;
 
 import lombok.*;
+import org.asiczen.pettracker.model.Cattle;
+import org.asiczen.pettracker.model.Pet;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -29,10 +31,10 @@ public class PetLastLocation {
 
     private Date timeStamp;
 
-    private String petName;
+    private String animalType;
 
-    private String petType;
+    private Pet pet;
 
-    private String petBreed;
+    private Cattle cattle;
 
 }

@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
@@ -15,23 +14,25 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document(collection = "pet_pet")
-public class Pet {
+@Document(collection = "cattle")
+public class Cattle {
 
     @Id
     private String id;
     @Indexed
     private String ownerId;
-    private String animalType = "pet";
-    private String name;
-    private String petType;
-    private String petBreed;
-    private String petColour;
-    private String petSex;
-    private String kennelClubRegNo;
-    private float petWeight;
-    private Date petDob;
+    private String animalType = "cattle";
+    private String earTagNumber;
+    private Date dob;
+    private String breed;
+    private String sex;
+    private String geneticDam;
+    private String damIdNumber;
+    private Date dateOfPassportIssue;
+    //If valid date entered the device stop working
+    private Date dateOfCattleDied;
 
-    //@DBRef
-    private Device device; // One-to-one with device.
+
+    private Device device;
+
 }

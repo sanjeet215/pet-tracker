@@ -1,25 +1,125 @@
-2021-05-04 16:10:15.043  INFO 12160 --- [Thread-18] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:10, serverValue:221}] to 127.0.0.1:27017 because the pool has been closed.
-2021-05-04 16:10:25.182  INFO 12160 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Starting PetTrackerApplication using Java 11.0.7 on azCom42 with PID 12160 (E:\ASICZEN-WEB-PROJECT\pet-tracker\pet-tracker\target\classes started by spmishra in E:\ASICZEN-WEB-PROJECT\pet-tracker\pet-tracker)
-2021-05-04 16:10:25.183  INFO 12160 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : No active profile set, falling back to default profiles: default
-2021-05-04 16:10:27.383  INFO 12160 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-05-04 16:10:27.384  INFO 12160 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-05-04 16:10:27.437  INFO 12160 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-05-04 16:10:27.570  INFO 12160 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
-2021-05-04 16:10:27.682  INFO 12160 --- [restartedMain] org.mongodb.driver.cluster               : Cluster description not yet available. Waiting for 30000 ms before timing out
-2021-05-04 16:10:27.729  INFO 12160 --- [cluster-ClusterId{value='6091249bfec6b817804b83a6', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:11, serverValue:228}] to 127.0.0.1:27017
-2021-05-04 16:10:27.729  INFO 12160 --- [cluster-rtt-ClusterId{value='6091249bfec6b817804b83a6', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:12, serverValue:229}] to 127.0.0.1:27017
-2021-05-04 16:10:27.731  INFO 12160 --- [cluster-ClusterId{value='6091249bfec6b817804b83a6', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=153676100}
-2021-05-04 16:10:27.734  INFO 12160 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:13, serverValue:230}] to 127.0.0.1:27017
-2021-05-04 16:10:30.218  INFO 12160 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Started PetTrackerApplication in 5.157 seconds (JVM running for 527037.002)
-2021-05-04 16:10:30.919  INFO 12160 --- [Thread-23] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:13, serverValue:230}] to 127.0.0.1:27017 because the pool has been closed.
-2021-05-04 16:10:31.100  INFO 12160 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Starting PetTrackerApplication using Java 11.0.7 on azCom42 with PID 12160 (E:\ASICZEN-WEB-PROJECT\pet-tracker\pet-tracker\target\classes started by spmishra in E:\ASICZEN-WEB-PROJECT\pet-tracker\pet-tracker)
-2021-05-04 16:10:31.100  INFO 12160 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : No active profile set, falling back to default profiles: default
-2021-05-04 16:10:31.930  INFO 12160 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-05-04 16:10:31.930  INFO 12160 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-05-04 16:10:31.947  INFO 12160 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-05-04 16:10:32.040  INFO 12160 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
-2021-05-04 16:10:32.071  INFO 12160 --- [cluster-rtt-ClusterId{value='609124a0fec6b817804b83a7', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:15, serverValue:232}] to 127.0.0.1:27017
-2021-05-04 16:10:32.069  INFO 12160 --- [cluster-ClusterId{value='609124a0fec6b817804b83a7', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:14, serverValue:231}] to 127.0.0.1:27017
-2021-05-04 16:10:32.074  INFO 12160 --- [cluster-ClusterId{value='609124a0fec6b817804b83a7', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=25549000}
-2021-05-04 16:10:32.111  INFO 12160 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:16, serverValue:233}] to 127.0.0.1:27017
-2021-05-04 16:10:33.456  INFO 12160 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Started PetTrackerApplication in 2.399 seconds (JVM running for 527040.24)
+2021-05-25 09:46:57.011  INFO 26916 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Starting PetTrackerApplication using Java 11.0.7 on azCom42 with PID 26916 (E:\ASICZEN-WEB-PROJECT\pet-tracker\pet-tracker\target\classes started by spmishra in E:\ASICZEN-WEB-PROJECT\pet-tracker\pet-tracker)
+2021-05-25 09:46:57.142  INFO 26916 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : No active profile set, falling back to default profiles: default
+2021-05-25 09:47:05.002  INFO 26916 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 09:47:05.003  INFO 26916 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 09:47:05.215  INFO 26916 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 09:47:06.361  INFO 26916 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-25 09:47:06.878  INFO 26916 --- [cluster-rtt-ClusterId{value='60ac7a424f6b7500a39262e2', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:39}] to 127.0.0.1:27017
+2021-05-25 09:47:06.891  INFO 26916 --- [cluster-ClusterId{value='60ac7a424f6b7500a39262e2', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:40}] to 127.0.0.1:27017
+2021-05-25 09:47:06.894  INFO 26916 --- [cluster-ClusterId{value='60ac7a424f6b7500a39262e2', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=276225200}
+2021-05-25 09:47:07.562  INFO 26916 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:41}] to 127.0.0.1:27017
+2021-05-25 09:47:08.371  INFO 26916 --- [restartedMain] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:3, serverValue:41}] to 127.0.0.1:27017 because the pool has been closed.
+2021-05-25 09:47:08.389  INFO 26916 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-05-25 09:47:08.613 ERROR 26916 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field cattleService in org.asiczen.pettracker.controller.CattleController required a bean of type 'org.asiczen.pettracker.service.CattleService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.asiczen.pettracker.service.CattleService' in your configuration.
+
+2021-05-25 11:51:37.596  INFO 34620 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Starting PetTrackerApplication using Java 11.0.7 on azCom42 with PID 34620 (E:\ASICZEN-WEB-PROJECT\pet-tracker\pet-tracker\target\classes started by spmishra in E:\ASICZEN-WEB-PROJECT\pet-tracker\pet-tracker)
+2021-05-25 11:51:37.618  INFO 34620 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : No active profile set, falling back to default profiles: default
+2021-05-25 11:51:45.780  INFO 34620 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 11:51:45.782  INFO 34620 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 11:51:46.021  INFO 34620 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 11:51:47.000  INFO 34620 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-25 11:51:47.200  INFO 34620 --- [cluster-ClusterId{value='60ac977a15bc1d461ec8a9ae', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:64}] to 127.0.0.1:27017
+2021-05-25 11:51:47.203  INFO 34620 --- [cluster-ClusterId{value='60ac977a15bc1d461ec8a9ae', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=59904600}
+2021-05-25 11:51:47.205  INFO 34620 --- [cluster-rtt-ClusterId{value='60ac977a15bc1d461ec8a9ae', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:63}] to 127.0.0.1:27017
+2021-05-25 11:51:48.170  INFO 34620 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:65}] to 127.0.0.1:27017
+2021-05-25 11:51:49.504  INFO 34620 --- [restartedMain] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:3, serverValue:65}] to 127.0.0.1:27017 because the pool has been closed.
+2021-05-25 11:51:49.516  INFO 34620 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-05-25 11:51:49.615 ERROR 34620 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field cattleService in org.asiczen.pettracker.controller.CattleController required a bean of type 'org.asiczen.pettracker.service.CattleService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.asiczen.pettracker.service.CattleService' in your configuration.
+
+2021-05-25 11:52:19.484  INFO 17584 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Starting PetTrackerApplication using Java 11.0.7 on azCom42 with PID 17584 (E:\ASICZEN-WEB-PROJECT\pet-tracker\pet-tracker\target\classes started by spmishra in E:\ASICZEN-WEB-PROJECT\pet-tracker\pet-tracker)
+2021-05-25 11:52:19.490  INFO 17584 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : No active profile set, falling back to default profiles: default
+2021-05-25 11:52:26.437  INFO 17584 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 11:52:26.438  INFO 17584 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 11:52:26.662  INFO 17584 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 11:52:27.435  INFO 17584 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-25 11:52:27.545  INFO 17584 --- [cluster-rtt-ClusterId{value='60ac97a34e250c3e17da23b6', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:66}] to 127.0.0.1:27017
+2021-05-25 11:52:27.549  INFO 17584 --- [cluster-ClusterId{value='60ac97a34e250c3e17da23b6', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:67}] to 127.0.0.1:27017
+2021-05-25 11:52:27.551  INFO 17584 --- [cluster-ClusterId{value='60ac97a34e250c3e17da23b6', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=40202499}
+2021-05-25 11:52:28.094  INFO 17584 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:68}] to 127.0.0.1:27017
+2021-05-25 11:52:28.407  INFO 17584 --- [restartedMain] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:3, serverValue:68}] to 127.0.0.1:27017 because the pool has been closed.
+2021-05-25 11:52:28.415  INFO 17584 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-05-25 11:52:28.492 ERROR 17584 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field cattleService in org.asiczen.pettracker.controller.CattleController required a bean of type 'org.asiczen.pettracker.service.CattleService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.asiczen.pettracker.service.CattleService' in your configuration.
+
+2021-05-25 11:53:26.926  INFO 33920 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Starting PetTrackerApplication using Java 11.0.7 on azCom42 with PID 33920 (E:\ASICZEN-WEB-PROJECT\pet-tracker\pet-tracker\target\classes started by spmishra in E:\ASICZEN-WEB-PROJECT\pet-tracker\pet-tracker)
+2021-05-25 11:53:26.955  INFO 33920 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : No active profile set, falling back to default profiles: default
+2021-05-25 11:53:32.911  INFO 33920 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 11:53:32.912  INFO 33920 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 11:53:33.159  INFO 33920 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 11:53:33.886  INFO 33920 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-25 11:53:33.988  INFO 33920 --- [cluster-rtt-ClusterId{value='60ac97e55d4b8c0f7f28dd8b', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:70}] to 127.0.0.1:27017
+2021-05-25 11:53:33.991  INFO 33920 --- [cluster-ClusterId{value='60ac97e55d4b8c0f7f28dd8b', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:69}] to 127.0.0.1:27017
+2021-05-25 11:53:33.993  INFO 33920 --- [cluster-ClusterId{value='60ac97e55d4b8c0f7f28dd8b', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=42843401}
+2021-05-25 11:53:34.721  INFO 33920 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:71}] to 127.0.0.1:27017
+2021-05-25 11:53:45.263  INFO 33920 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Started PetTrackerApplication in 19.901 seconds (JVM running for 21.214)
+2021-05-25 11:56:40.203  INFO 33920 --- [http-nio-5001-exec-9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-25 13:42:18.742  INFO 33920 --- [Thread-4] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:3, serverValue:71}] to 127.0.0.1:27017 because the pool has been closed.
+2021-05-25 13:42:24.987  INFO 33920 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Starting PetTrackerApplication using Java 11.0.7 on azCom42 with PID 33920 (E:\ASICZEN-WEB-PROJECT\pet-tracker\pet-tracker\target\classes started by spmishra in E:\ASICZEN-WEB-PROJECT\pet-tracker\pet-tracker)
+2021-05-25 13:42:24.988  INFO 33920 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : No active profile set, falling back to default profiles: default
+2021-05-25 13:42:26.771  INFO 33920 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 13:42:26.772  INFO 33920 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 13:42:26.874  INFO 33920 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-05-25 13:42:27.923  INFO 33920 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-25 13:42:28.098  INFO 33920 --- [cluster-ClusterId{value='60acb16b5d4b8c0f7f28dd91', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:6, serverValue:74}] to 127.0.0.1:27017
+2021-05-25 13:42:28.100  INFO 33920 --- [cluster-ClusterId{value='60acb16b5d4b8c0f7f28dd91', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=28244401}
+2021-05-25 13:42:28.145  INFO 33920 --- [cluster-rtt-ClusterId{value='60acb16b5d4b8c0f7f28dd91', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:7, serverValue:75}] to 127.0.0.1:27017
+2021-05-25 13:42:29.967  INFO 33920 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Started PetTrackerApplication in 5.131 seconds (JVM running for 6545.918)
+2021-05-25 13:42:35.996  INFO 33920 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Starting PetTrackerApplication using Java 11.0.7 on azCom42 with PID 33920 (E:\ASICZEN-WEB-PROJECT\pet-tracker\pet-tracker\target\classes started by spmishra in E:\ASICZEN-WEB-PROJECT\pet-tracker\pet-tracker)
+2021-05-25 13:42:35.997  INFO 33920 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : No active profile set, falling back to default profiles: default
+2021-05-25 13:42:36.928  INFO 33920 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 13:42:36.929  INFO 33920 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 13:42:36.985  INFO 33920 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-05-25 13:42:37.270  INFO 33920 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-25 13:42:37.421  INFO 33920 --- [restartedMain] org.mongodb.driver.cluster               : Cluster description not yet available. Waiting for 30000 ms before timing out
+2021-05-25 13:42:37.513  INFO 33920 --- [cluster-ClusterId{value='60acb1755d4b8c0f7f28dd92', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:8, serverValue:76}] to 127.0.0.1:27017
+2021-05-25 13:42:38.092  INFO 33920 --- [cluster-rtt-ClusterId{value='60acb1755d4b8c0f7f28dd92', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:9, serverValue:77}] to 127.0.0.1:27017
+2021-05-25 13:42:38.092  INFO 33920 --- [cluster-ClusterId{value='60acb1755d4b8c0f7f28dd92', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=54060900}
+2021-05-25 13:42:38.356  INFO 33920 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:10, serverValue:78}] to 127.0.0.1:27017
+2021-05-25 13:42:41.132  INFO 33920 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Started PetTrackerApplication in 5.237 seconds (JVM running for 6557.083)

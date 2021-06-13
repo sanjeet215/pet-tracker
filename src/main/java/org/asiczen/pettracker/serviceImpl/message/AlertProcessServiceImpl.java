@@ -142,17 +142,18 @@ public class AlertProcessServiceImpl implements AlertProcessService {
 
         AlertMessageResponse alertMessageResponse = new AlertMessageResponse();
 
-        String alertMsg = "Your pet "+ transFormedMessage.getPetName() + " has gone out of fence.";
+        String alertMsg = "Your pet "+ transFormedMessage.getPet().getName() + " has gone out of fence.";
 
         alertMessageResponse.setMessage(alertMsg);
         alertMessageResponse.setOwnerId(transFormedMessage.getOwnerId());
         alertMessageResponse.setDevEui(transFormedMessage.getDevEui());
         alertMessageResponse.setLatitude(transFormedMessage.getLatitude());
         alertMessageResponse.setLongitude(transFormedMessage.getLongitude());
-        alertMessageResponse.setPetName(transFormedMessage.getPetName());
-        alertMessageResponse.setPetBreed(transFormedMessage.getPetBreed());
-        alertMessageResponse.setPetType(transFormedMessage.getPetType());
         alertMessageResponse.setTimeStamp(transFormedMessage.getTimeStamp());
+
+        alertMessageResponse.setAnimalType(transFormedMessage.getAnimalType());
+        alertMessageResponse.setPet(transFormedMessage.getPet());
+        alertMessageResponse.setCattle(transFormedMessage.getCattle());
 
         iotMessageSource.petAlertMessageSource().send(MessageBuilder.withPayload(alertMessageResponse).build());
     }

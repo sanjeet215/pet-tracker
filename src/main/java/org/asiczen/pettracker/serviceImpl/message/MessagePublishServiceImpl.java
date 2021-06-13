@@ -2,15 +2,13 @@ package org.asiczen.pettracker.serviceImpl.message;
 
 import lombok.extern.slf4j.Slf4j;
 import org.asiczen.pettracker.exception.ResourceNotFoundException;
+import org.asiczen.pettracker.model.Cattle;
 import org.asiczen.pettracker.model.OwnerConfig;
 import org.asiczen.pettracker.model.Pet;
 import org.asiczen.pettracker.model.message.OriginalMessage;
 import org.asiczen.pettracker.model.message.PetLastLocation;
 import org.asiczen.pettracker.model.message.TransFormedMessage;
-import org.asiczen.pettracker.repository.OwnerConfigRepository;
-import org.asiczen.pettracker.repository.PetLastLocationRepository;
-import org.asiczen.pettracker.repository.PetRepository;
-import org.asiczen.pettracker.repository.TransFormedMessageRepository;
+import org.asiczen.pettracker.repository.*;
 import org.asiczen.pettracker.service.message.AlertProcessService;
 import org.asiczen.pettracker.service.message.MessagePublishService;
 import org.asiczen.pettracker.source.IOTMessageSource;
@@ -36,6 +34,9 @@ public class MessagePublishServiceImpl implements MessagePublishService {
     PetRepository petRepository;
 
     @Autowired
+    CattleRepository cattleRepository;
+
+    @Autowired
     OwnerConfigRepository ownerConfigRepository;
 
     @Autowired
@@ -50,6 +51,8 @@ public class MessagePublishServiceImpl implements MessagePublishService {
 
         Pet pet = petRepository.findByDeviceDeviceId(originalMessage.getEnd_device_ids().getDev_eui());
 
+        Cattle cattle = cattleRepository.findByDeviceDeviceId(originalMessage.getEnd_device_ids().getDev_eui());
+
         if(pet != null) {
 
             transFormedMessage.setDevEui(originalMessage.getEnd_device_ids().getDev_eui());
@@ -57,11 +60,51 @@ public class MessagePublishServiceImpl implements MessagePublishService {
             transFormedMessage.setLongitude(originalMessage.getLocation_solved().getLocation().getLongitude());
             transFormedMessage.setTimeStamp(originalMessage.getReceived_at());
 
-            transFormedMessage.setPetName(pet.getName());
-            transFormedMessage.setPetType(pet.getPetType());
-            transFormedMessage.setPetBreed(pet.getPetBreed());
+            Pet pet1 = new Pet();
+
+            pet1.setId(pet.getId());
+            pet1.setOwnerId(pet.getOwnerId());
+            pet1.setName(pet.getName());
+            pet1.setPetType(pet.getPetType());
+            pet1.setPetBreed(pet.getPetBreed());
+            pet1.setAnimalType(pet.getAnimalType());
+            pet1.setPetColour(pet.getPetColour());
+            pet1.setPetSex(pet.getPetSex());
+            pet1.setKennelClubRegNo(pet.getKennelClubRegNo());
+            pet1.setPetWeight(pet.getPetWeight());
+            pet1.setPetDob(pet.getPetDob());
+
+            pet1.setDevice(pet.getDevice());
+
+            transFormedMessage.setAnimalType(pet.getAnimalType());
+            transFormedMessage.setPet(pet1);
 
             transFormedMessage.setOwnerId(pet.getOwnerId());
+
+            messageRepository.save(transFormedMessage);
+
+            updateLastLocationOfPet(transFormedMessage);
+
+            iotMessageSource.iotMessageSource().send(MessageBuilder.withPayload(transFormedMessage).build());
+            Optional<OwnerConfig> ownerConfig = ownerConfigRepository.findByOwnerId(transFormedMessage.getOwnerId());
+
+            if(ownerConfig.isPresent()) {
+                alertProcessService.geoFenceViolation(transFormedMessage);
+            }
+
+        }else if (cattle != null) {
+
+            transFormedMessage.setDevEui(originalMessage.getEnd_device_ids().getDev_eui());
+            transFormedMessage.setLatitude(originalMessage.getLocation_solved().getLocation().getLatitude());
+            transFormedMessage.setLongitude(originalMessage.getLocation_solved().getLocation().getLongitude());
+            transFormedMessage.setTimeStamp(originalMessage.getReceived_at());
+
+           // Cattle cattle1 = new Cattle();
+
+            transFormedMessage.setAnimalType(cattle.getAnimalType());
+            transFormedMessage.setCattle(cattle);
+
+            transFormedMessage.setOwnerId(cattle.getOwnerId());
 
             messageRepository.save(transFormedMessage);
 
@@ -91,9 +134,10 @@ public class MessagePublishServiceImpl implements MessagePublishService {
             petLastLocation.setLatitude(transFormedMessage.getLatitude());
             petLastLocation.setLongitude(transFormedMessage.getLongitude());
 
-            petLastLocation.setPetName(transFormedMessage.getPetName());
-            petLastLocation.setPetBreed(transFormedMessage.getPetBreed());
-            petLastLocation.setPetType(transFormedMessage.getPetType());
+            petLastLocation.setAnimalType(transFormedMessage.getAnimalType());
+            petLastLocation.setPet(transFormedMessage.getPet());
+            petLastLocation.setCattle(transFormedMessage.getCattle());
+
 
             lastLocationRepository.save(petLastLocation);
 
@@ -108,9 +152,9 @@ public class MessagePublishServiceImpl implements MessagePublishService {
             petLastLocation.setLatitude(transFormedMessage.getLatitude());
             petLastLocation.setLongitude(transFormedMessage.getLongitude());
 
-            petLastLocation.setPetName(transFormedMessage.getPetName());
-            petLastLocation.setPetBreed(transFormedMessage.getPetBreed());
-            petLastLocation.setPetType(transFormedMessage.getPetType());
+            petLastLocation.setAnimalType(transFormedMessage.getAnimalType());
+            petLastLocation.setPet(transFormedMessage.getPet());
+            petLastLocation.setCattle(transFormedMessage.getCattle());
 
             lastLocationRepository.save(petLastLocation);
         }
