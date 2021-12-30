@@ -5,9 +5,11 @@ import org.asiczen.pettracker.dto.OwnerDeviceListUpdateReq;
 import org.asiczen.pettracker.dto.response.OwnerResponse;
 import org.asiczen.pettracker.exception.ResourceAlreadyExistException;
 import org.asiczen.pettracker.exception.ResourceNotFoundException;
+import org.asiczen.pettracker.model.Cattle;
 import org.asiczen.pettracker.model.Device;
 import org.asiczen.pettracker.model.Owner;
 import org.asiczen.pettracker.model.Pet;
+import org.asiczen.pettracker.repository.CattleRepository;
 import org.asiczen.pettracker.repository.OwnerRepository;
 import org.asiczen.pettracker.repository.PetRepository;
 import org.asiczen.pettracker.service.OwnerService;
@@ -30,15 +32,17 @@ public class OwnerServiceImpl implements OwnerService {
     @Autowired
     PetRepository petRepository;
 
+    @Autowired
+    CattleRepository cattleRepository;
+
     @Override
     public OwnerResponse updateDeviceList(OwnerDeviceListUpdateReq ownerDeviceListUpdateReq) {
 
-
         Owner owner = ownerRepository.findByOwnerId(ownerDeviceListUpdateReq.getOwnerId());
         if (owner != null) {
-
-            if (owner.getDeviceList() != null && owner.getDeviceList().contains(ownerDeviceListUpdateReq.getDevice())) {
-
+            //if (owner.getDeviceList() != null && owner.getDeviceList().contains(ownerDeviceListUpdateReq.getDevice())) {
+            if ((owner.getDeviceList() != null) && !(owner.getDeviceList().stream().filter(device -> device.getDeviceId().equals(
+                    ownerDeviceListUpdateReq.getDevice().getDeviceId())).findFirst().isEmpty())) {
                 throw new ResourceAlreadyExistException("Already this device available");
             } else {
                 if (owner.getDeviceList() != null) {
@@ -100,16 +104,21 @@ public class OwnerServiceImpl implements OwnerService {
     @org.springframework.transaction.annotation.Transactional(propagation = Propagation.REQUIRES_NEW)
     public OwnerResponse deleteDevice(String ownerId, String devEui) {
         Owner owner = ownerRepository.findByOwnerId(ownerId);
+        Optional<Pet> pet = petRepository.findByOwnerIdAndDeviceDeviceId(ownerId, devEui);
+        Optional<Cattle> cattle = cattleRepository.findByOwnerIdAndDeviceDeviceId(ownerId, devEui);
         if (owner != null) {
-
             if (owner.getDeviceList() != null){
-
                Device device = owner.getDeviceList().stream().filter(device1 -> device1.getDeviceId().equals(devEui)).findAny().orElse(null);
                log.info("Before delete {}",device);
                if(device != null) {
                    if(owner.getDeviceList().remove(device)) {
+                       if(pet.isPresent()) {
+                           removeDeviceFromPet(ownerId, devEui);
+                       }else if(cattle.isPresent()) {
+                           removeDeviceFromCattle(ownerId, devEui);
+                       }
 
-                      removeDeviceFromPet(ownerId, devEui);
+                       ownerRepository.save(owner);
                       return new OwnerResponse("Device deleted successfully.");
 
                    } else {
@@ -117,7 +126,7 @@ public class OwnerServiceImpl implements OwnerService {
                    }
 
                } else {
-                   throw new ResourceNotFoundException("Invalid owner id to get owner.");
+                   throw new ResourceNotFoundException("Invalid owner id or device id to get owner.");
                }
 
 
@@ -144,6 +153,22 @@ public class OwnerServiceImpl implements OwnerService {
 
         }else {
             throw new ResourceNotFoundException("Invalid owner and device id to get pet.");
+        }
+    }
+
+    private void removeDeviceFromCattle(String ownerId, String devEui) {
+        Optional<Cattle> cattle = cattleRepository.findByOwnerIdAndDeviceDeviceId(ownerId, devEui);
+
+        if (cattle.isPresent()) {
+
+            Cattle cattle1 = cattle.get();
+            cattle1.setDevice(null);
+            cattleRepository.save(cattle1);
+
+
+
+        }else {
+            throw new ResourceNotFoundException("Invalid owner and device id to get cattle.");
         }
     }
 }

@@ -16,4 +16,6 @@ public interface CattleRepository extends MongoRepository<Cattle, String> {
     Cattle findByDeviceDeviceId(String devEui);
 
     Optional<Cattle> findByOwnerIdAndDeviceDeviceId(String ownerId, String devEui);
+
+    Optional<Cattle> findByOwnerIdAndId(String ownerId, String cattleId);
 }

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/api/analytics")
+@RequestMapping("/api/pet/analytics")
 @Slf4j
 public class AnalyticsController {
 
@@ -37,5 +37,13 @@ public class AnalyticsController {
         return ResponseEntity.status(HttpStatus.OK)
                 .body(new ApiResponse(HttpStatus.OK.value(), "Pet history extracted successfully",
                         analyticsService.findByDevEuiAndTimeStampBetween(request.getDevEui(),	request.getStartDateTime(), request.getEndDateTime())));
+    }
+
+    @PostMapping("/testDevice")
+    public ResponseEntity<?> testDevice(@Valid @RequestBody String request) {
+
+
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(new ApiResponse(HttpStatus.OK.value(), "Test device post response", request));
     }
 }

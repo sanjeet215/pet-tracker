@@ -2,6 +2,8 @@ package org.asiczen.pettracker.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.asiczen.pettracker.dto.response.ApiResponse;
+import org.asiczen.pettracker.dto.response.CountResponse;
+import org.asiczen.pettracker.dto.response.OwnerResponse;
 import org.asiczen.pettracker.model.Device;
 import org.asiczen.pettracker.model.Owner;
 import org.asiczen.pettracker.model.Pet;
@@ -27,5 +29,18 @@ public class PetController {
     public List<Pet> getDeviceList(@Valid @RequestParam String ownerId) {
 
         return petService.getAllPetList(ownerId);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @PatchMapping("/editPet")
+    public ResponseEntity<?> editPet(@Valid @RequestBody Pet pet) {
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(new ApiResponse(HttpStatus.OK.value(), "Pet updated successfully", petService.editPet(pet)));
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @DeleteMapping("/deletePet")
+    public OwnerResponse deletePet(@Valid @RequestParam String ownerId, @RequestParam String petId) {
+        return petService.deletePet(ownerId, petId);
     }
 }
