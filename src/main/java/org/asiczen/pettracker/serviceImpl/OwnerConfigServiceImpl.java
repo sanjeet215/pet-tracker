@@ -4,6 +4,8 @@ import org.asiczen.pettracker.dto.GeofenceConfigRequest;
 import org.asiczen.pettracker.exception.InternalServerError;
 import org.asiczen.pettracker.exception.ResourceNotFoundException;
 import org.asiczen.pettracker.model.OwnerConfig;
+import org.asiczen.pettracker.model.message.GeofenceLocation;
+import org.asiczen.pettracker.repository.GeofenceLocationsRepository;
 import org.asiczen.pettracker.repository.OwnerConfigRepository;
 import org.asiczen.pettracker.service.OwnerConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,9 @@ public class OwnerConfigServiceImpl implements OwnerConfigService {
 
     @Autowired
     OwnerConfigRepository ownerConfigRepository;
+
+    @Autowired
+    GeofenceLocationsRepository geofenceLocationsRepository;
 
     @Override
     public String setOwnerConfig(GeofenceConfigRequest geofenceConfigRequest) {
@@ -129,5 +134,28 @@ public class OwnerConfigServiceImpl implements OwnerConfigService {
         }else {
             throw new ResourceNotFoundException("Invalid owner id to get owner configuration.");
         }
+    }
+
+    @Override
+    public GeofenceLocation setOrUpdateGeofencePoints(GeofenceLocation geofenceLocation) {
+
+        GeofenceLocation geofenceLocation1 = geofenceLocationsRepository.findByOwnerId(geofenceLocation.getOwnerId());
+
+        if (geofenceLocation1 == null){
+
+            return geofenceLocationsRepository.save(geofenceLocation);
+
+        }else {
+
+            geofenceLocation1.setPointList(geofenceLocation.getPointList());
+            return geofenceLocationsRepository.save(geofenceLocation1);
+        }
+    }
+
+    @Override
+    public GeofenceLocation getGeofenceLocations(String ownerId) {
+
+        return geofenceLocationsRepository.findByOwnerId(ownerId);
+
     }
 }

@@ -1,6 +1,17 @@
 server:
   port: 5001
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, beans, *
+  endpoint:
+    metrics:
+      enabled: true
+    health:
+      show-details: always
+    beans:
+      enabled: true
 spring:
   application:
     name: petra-service

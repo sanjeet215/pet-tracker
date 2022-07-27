@@ -93,8 +93,11 @@ public class AnalyticsServiceImpl implements AnalyticsService {
         transFormedMessage.setTimeStamp(petLastLocation.getTimeStamp());
 
         transFormedMessage.setAnimalType(petLastLocation.getAnimalType());
-        transFormedMessage.setPet(petLastLocation.getPet());
-        transFormedMessage.setCattle(petLastLocation.getCattle());
+        transFormedMessage.setCow(petLastLocation.getCow());
+        transFormedMessage.setSheep(petLastLocation.getSheep());
+
+        transFormedMessage.setTemperature(petLastLocation.getTemperature());
+        transFormedMessage.setBattery(petLastLocation.getBattery());
 
         return transFormedMessage;
     }

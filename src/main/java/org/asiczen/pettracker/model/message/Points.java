@@ -9,6 +9,8 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class SolvedLocation {
-    private Location location;
+public class Points {
+
+    double x;
+    double y;
 }

@@ -5,13 +5,11 @@ import org.asiczen.pettracker.dto.OwnerDeviceListUpdateReq;
 import org.asiczen.pettracker.dto.response.OwnerResponse;
 import org.asiczen.pettracker.exception.ResourceAlreadyExistException;
 import org.asiczen.pettracker.exception.ResourceNotFoundException;
-import org.asiczen.pettracker.model.Cattle;
+import org.asiczen.pettracker.model.Cow;
 import org.asiczen.pettracker.model.Device;
 import org.asiczen.pettracker.model.Owner;
-import org.asiczen.pettracker.model.Pet;
-import org.asiczen.pettracker.repository.CattleRepository;
-import org.asiczen.pettracker.repository.OwnerRepository;
-import org.asiczen.pettracker.repository.PetRepository;
+import org.asiczen.pettracker.model.Sheep;
+import org.asiczen.pettracker.repository.*;
 import org.asiczen.pettracker.service.OwnerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -30,10 +28,12 @@ public class OwnerServiceImpl implements OwnerService {
     OwnerRepository ownerRepository;
 
     @Autowired
-    PetRepository petRepository;
+    //PetRepository petRepository;
+    CowRepository cowRepository;
 
     @Autowired
-    CattleRepository cattleRepository;
+    //CattleRepository cattleRepository;
+    SheepRepository sheepRepository;
 
     @Override
     public OwnerResponse updateDeviceList(OwnerDeviceListUpdateReq ownerDeviceListUpdateReq) {
@@ -104,8 +104,8 @@ public class OwnerServiceImpl implements OwnerService {
     @org.springframework.transaction.annotation.Transactional(propagation = Propagation.REQUIRES_NEW)
     public OwnerResponse deleteDevice(String ownerId, String devEui) {
         Owner owner = ownerRepository.findByOwnerId(ownerId);
-        Optional<Pet> pet = petRepository.findByOwnerIdAndDeviceDeviceId(ownerId, devEui);
-        Optional<Cattle> cattle = cattleRepository.findByOwnerIdAndDeviceDeviceId(ownerId, devEui);
+        Optional<Cow> pet = cowRepository.findByOwnerIdAndDeviceDeviceId(ownerId, devEui);
+        Optional<Sheep> cattle = sheepRepository.findByOwnerIdAndDeviceDeviceId(ownerId, devEui);
         if (owner != null) {
             if (owner.getDeviceList() != null){
                Device device = owner.getDeviceList().stream().filter(device1 -> device1.getDeviceId().equals(devEui)).findAny().orElse(null);
@@ -141,34 +141,34 @@ public class OwnerServiceImpl implements OwnerService {
     }
 
     private void removeDeviceFromPet(String ownerId, String devEui) {
-        Optional<Pet> pet = petRepository.findByOwnerIdAndDeviceDeviceId(ownerId, devEui);
+        Optional<Cow> pet = cowRepository.findByOwnerIdAndDeviceDeviceId(ownerId, devEui);
 
         if (pet.isPresent()) {
 
-            Pet pet1 = pet.get();
-            pet1.setDevice(null);
-            petRepository.save(pet1);
+            Cow cow1 = pet.get();
+            cow1.setDevice(null);
+            cowRepository.save(cow1);
 
 
 
         }else {
-            throw new ResourceNotFoundException("Invalid owner and device id to get pet.");
+            throw new ResourceNotFoundException("Invalid owner and device id to get cow.");
         }
     }
 
     private void removeDeviceFromCattle(String ownerId, String devEui) {
-        Optional<Cattle> cattle = cattleRepository.findByOwnerIdAndDeviceDeviceId(ownerId, devEui);
+        Optional<Sheep> cattle = sheepRepository.findByOwnerIdAndDeviceDeviceId(ownerId, devEui);
 
         if (cattle.isPresent()) {
 
-            Cattle cattle1 = cattle.get();
-            cattle1.setDevice(null);
-            cattleRepository.save(cattle1);
+            Sheep sheep1 = cattle.get();
+            sheep1.setDevice(null);
+            sheepRepository.save(sheep1);
 
 
 
         }else {
-            throw new ResourceNotFoundException("Invalid owner and device id to get cattle.");
+            throw new ResourceNotFoundException("Invalid owner and device id to get sheep.");
         }
     }
 }

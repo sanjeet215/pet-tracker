@@ -4,8 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.asiczen.pettracker.model.Cattle;
-import org.asiczen.pettracker.model.Pet;
+import org.asiczen.pettracker.model.Cow;
+import org.asiczen.pettracker.model.Sheep;
 
 import java.util.Date;
 
@@ -29,7 +29,7 @@ public class AlertMessageResponse {
 
     private String message;
 
-    private Pet pet;
+    private Cow cow;
 
-    private Cattle cattle;
+    private Sheep sheep;
 }

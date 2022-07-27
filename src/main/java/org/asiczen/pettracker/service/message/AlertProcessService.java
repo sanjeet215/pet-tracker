@@ -8,4 +8,10 @@ public interface AlertProcessService {
 
     public void geoFenceViolation(TransFormedMessage transFormedMessage);
 
+    public void temperatureAlert(TransFormedMessage transFormedMessage);
+
+    public void lowBatteryAlert(TransFormedMessage transFormedMessage);
+
+    public void cattleNoMovementAlert(TransFormedMessage transFormedMessage);
+
 }

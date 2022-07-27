@@ -5,6 +5,7 @@ import org.asiczen.pettracker.dto.GeofenceConfigRequest;
 import org.asiczen.pettracker.dto.PetHistoryRequest;
 import org.asiczen.pettracker.dto.response.ApiResponse;
 import org.asiczen.pettracker.model.OwnerConfig;
+import org.asiczen.pettracker.model.message.GeofenceLocation;
 import org.asiczen.pettracker.service.OwnerConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -60,6 +61,26 @@ public class OwnerConfigController {
 
         return ResponseEntity.status(HttpStatus.OK).body(new ApiResponse(HttpStatus.OK.value(),
                 "Owner config updated.", ownerConfigService.updateOwnerConfig(updateRequest)));
+
+    }
+
+
+    @PatchMapping("/geofence/locations")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<ApiResponse> setOrUpdateGeofenceLocations(@Valid @RequestBody GeofenceLocation geofenceLocation) {
+
+        return ResponseEntity.status(HttpStatus.OK).body(new ApiResponse(HttpStatus.OK.value(),
+                "Geofence location updated.", ownerConfigService.setOrUpdateGeofencePoints(geofenceLocation)));
+
+    }
+
+
+    @GetMapping("/geofence/getLocations")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<ApiResponse> getGeofenceLocations(@Valid @RequestParam String ownerId) {
+
+        return ResponseEntity.status(HttpStatus.OK).body(new ApiResponse(HttpStatus.OK.value(),
+                "Get all geofence locations.", ownerConfigService.getGeofenceLocations(ownerId)));
 
     }
 

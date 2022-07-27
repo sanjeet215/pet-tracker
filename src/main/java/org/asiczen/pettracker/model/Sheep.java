@@ -14,25 +14,21 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document(collection = "cattle")
-public class Cattle {
+@Document(collection = "sheep")
+public class Sheep {
 
     @Id
     private String id;
     @Indexed
     private String ownerId;
-    private String animalType = "cattle";
+    private String animalType = "sheep";
     private String earTagNumber;
-    private Date dob;
-    private String breed;
-    private String sex;
-    private String geneticDam;
-    private String damIdNumber;
-    private Date dateOfPassportIssue;
-    //If valid date entered the device stop working
-    private Date dateOfCattleDied;
-
+    private Date dateOfBirth;
+    private String bodyTemperature;
+    private Date dateOfMovement;
+    private String movementFrom;
+    private String movementTo;
+    private Date dateOfDeath;
 
     private Device device;
-
 }

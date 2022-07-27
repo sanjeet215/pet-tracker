@@ -1,5 +1,6 @@
 package org.asiczen.pettracker.model.message;
 
+
 import lombok.*;
 import org.asiczen.pettracker.model.Cow;
 import org.asiczen.pettracker.model.Sheep;
@@ -11,28 +12,18 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Document(collection = "petmessagesprod")
+@Document(collection = "petalerttemperature")
 @EqualsAndHashCode(callSuper = false)
-public class TransFormedMessage {
+public class PetTemperatureCalculate {
 
     private String ownerId;
 
     private String devEui;
 
-    private double latitude;
-
-    private double longitude;
-
     private Date timeStamp;
 
-    private String animalType;
-
-    private String temperature;
+    private double temperature;
 
     private double battery;
-
-    private Cow cow;
-
-    private Sheep sheep;
 
 }

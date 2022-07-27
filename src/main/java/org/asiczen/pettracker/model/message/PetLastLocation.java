@@ -1,8 +1,8 @@
 package org.asiczen.pettracker.model.message;
 
 import lombok.*;
-import org.asiczen.pettracker.model.Cattle;
-import org.asiczen.pettracker.model.Pet;
+import org.asiczen.pettracker.model.Cow;
+import org.asiczen.pettracker.model.Sheep;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -33,8 +33,12 @@ public class PetLastLocation {
 
     private String animalType;
 
-    private Pet pet;
+    private String temperature;
 
-    private Cattle cattle;
+    private double battery;
+
+    private Cow cow;
+
+    private Sheep sheep;
 
 }

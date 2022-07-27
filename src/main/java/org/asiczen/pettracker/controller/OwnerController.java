@@ -7,9 +7,7 @@ import org.asiczen.pettracker.dto.response.CountResponse;
 import org.asiczen.pettracker.dto.response.OwnerResponse;
 import org.asiczen.pettracker.model.Device;
 import org.asiczen.pettracker.model.Owner;
-import org.asiczen.pettracker.service.CattleService;
-import org.asiczen.pettracker.service.OwnerService;
-import org.asiczen.pettracker.service.PetService;
+import org.asiczen.pettracker.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,10 +25,10 @@ public class OwnerController {
         OwnerService ownerService;
 
         @Autowired
-        PetService petService;
+        CowService cowService;
 
         @Autowired
-        CattleService cattleService;
+        SheepService sheepService;
 
         @PatchMapping("/editDevice")
         public OwnerResponse updateDeviceList(@RequestBody OwnerDeviceListUpdateReq ownerDeviceListUpdateReq) {
@@ -60,7 +58,7 @@ public class OwnerController {
         public ResponseEntity<?> getDeviceCount(@Valid @RequestParam String ownerId) {
                 return ResponseEntity.status(HttpStatus.OK)
                         .body(new ApiResponse(HttpStatus.OK.value(), "Owner device and pet count extracted successfully",
-                                new CountResponse(ownerService.getDeviceCount(ownerId),petService.getPetCount(ownerId),cattleService.getCattleCount(ownerId))));
+                                new CountResponse(ownerService.getDeviceCount(ownerId),cowService.getCowCount(ownerId),sheepService.getSheepCount(ownerId))));
         }
 
 

@@ -1,9 +1,6 @@
 package org.asiczen.pettracker.model.message;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.Date;
 
@@ -11,11 +8,17 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Builder
 public class OriginalMessage {
+
+    private String temperature;
+
+    private String voltage;
 
     private EndDeviceIDs end_device_ids;
 
     private Date received_at;
 
     private SolvedLocation location_solved;
+
 }
