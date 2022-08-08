@@ -1,5 +1,6 @@
 package org.asiczen.pettracker.serviceImpl.message;
 
+import com.mongodb.client.MongoClients;
 import lombok.extern.slf4j.Slf4j;
 import org.asiczen.pettracker.exception.ResourceNotFoundException;
 import org.asiczen.pettracker.model.Cow;
@@ -15,13 +16,20 @@ import org.asiczen.pettracker.service.message.MessagePublishService;
 import org.asiczen.pettracker.source.IOTMessageSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.integration.support.MessageBuilder;
 import org.springframework.stereotype.Component;
 
+import javax.swing.text.Document;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Optional;
+
+import static org.springframework.data.mongodb.core.query.Criteria.where;
 
 @Component
 @Slf4j
@@ -183,6 +191,30 @@ public class MessagePublishServiceImpl implements MessagePublishService {
                 alertProcessService.geoFenceViolation(transFormedMessage);
             }
 
+        }
+    }
+
+    @Override
+    public String resetTemperature(String deviceId) {
+
+        List<PetTemperatureCalculate> petTemperatureCalculate = petTemperatureRepository.findByDevEui(deviceId);
+        if (petTemperatureCalculate.isEmpty()) {
+
+            throw new ResourceNotFoundException("Device id not found.");
+
+        }else {
+
+            System.out.println(petTemperatureCalculate);
+
+            MongoOperations mongoOps = new MongoTemplate(MongoClients.create(), "test");
+            //Query q = new Query(where("_id").in(petTemperatureCalculate));
+            Query q = Query.query(Criteria.where("devEui").is(petTemperatureCalculate.get(0).getDevEui()));
+            List<Document> deletedDocs = mongoOps.findAllAndRemove(q, "petalerttemperature");
+// -or-
+//List<Document> deletedDocs = mongoOps.findAllAndRemove(q, "testColl");
+            System.out.println(deletedDocs);
+
+            return "Temperature reset successfully";
         }
     }
 

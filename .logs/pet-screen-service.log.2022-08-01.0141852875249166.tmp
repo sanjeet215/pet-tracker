@@ -1,0 +1,26 @@
+2022-08-03 10:57:32.568  INFO 34794 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : Starting PetTrackerApplication using Java 11.0.15 on Sritams-MacBook-Air.local with PID 34794 (/Users/sritam/Desktop/pet-tracker/pet-tracker/target/classes started by sritam in /Users/sritam/Desktop/pet-tracker/pet-tracker)
+2022-08-03 10:57:32.581  INFO 34794 --- [restartedMain] o.a.pettracker.PetTrackerApplication     : No active profile set, falling back to default profiles: default
+2022-08-03 10:57:36.702  INFO 34794 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-03 10:57:36.703  INFO 34794 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-03 10:57:36.785  INFO 34794 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-03 10:57:37.296  INFO 34794 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-08-03 10:57:37.394  INFO 34794 --- [cluster-ClusterId{value='62ea0749b8e8fd0da7fbc4ec', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:284}] to 127.0.0.1:27017
+2022-08-03 10:57:37.395  INFO 34794 --- [cluster-rtt-ClusterId{value='62ea0749b8e8fd0da7fbc4ec', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:283}] to 127.0.0.1:27017
+2022-08-03 10:57:37.399  INFO 34794 --- [cluster-ClusterId{value='62ea0749b8e8fd0da7fbc4ec', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=36566750}
+2022-08-03 10:57:37.933  INFO 34794 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:285}] to 127.0.0.1:27017
+2022-08-03 10:57:42.113  INFO 34794 --- [restartedMain] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:3, serverValue:285}] to 127.0.0.1:27017 because the pool has been closed.
+2022-08-03 10:57:42.122  INFO 34794 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-08-03 10:57:42.189 ERROR 34794 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 5001 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 5001 or configure this application to listen on another port.
+
